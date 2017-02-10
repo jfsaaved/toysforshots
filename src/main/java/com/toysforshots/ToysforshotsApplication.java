@@ -9,20 +9,11 @@ import org.springframework.http.HttpStatus;
 
 @SpringBootApplication
 public class ToysforshotsApplication {
+	
 
-	@Bean
-	public EmbeddedServletContainerCustomizer containerCustomizer(){
-		return ( container -> {
-			ErrorPage custom404Page = new ErrorPage(HttpStatus.NOT_FOUND,"/404");
-			container.addErrorPages(custom404Page);
-		});
-	}
-	
-	
 	public static void main(String[] args) {
-		
 
 		SpringApplication.run(ToysforshotsApplication.class, args);
-		System.out.println("Running"); 
+
 	}
 }

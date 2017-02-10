@@ -31,10 +31,5 @@ public class PostController {
 		return "post";
 	}
 	
-	@ExceptionHandler(Exception.class)
-	public String handleException(HttpServletRequest req, Exception exception, Model model) {
-		model.addAttribute("errorMessage", exception.getMessage());
-		return "error";
-	}
 	
 }
