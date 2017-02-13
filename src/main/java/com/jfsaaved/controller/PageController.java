@@ -13,8 +13,8 @@ public class PageController {
 
 	
 	@RequestMapping("/page")
-	public String page(){
-		return "page";
+	public String page() throws Exception{
+		throw new Exception();
 	}
 
 }
