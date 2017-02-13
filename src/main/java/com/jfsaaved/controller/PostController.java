@@ -12,11 +12,6 @@ public class PostController {
 	@Autowired
 	private PostService postService;
 	
-	@RequestMapping("/home")
-	public String home() {
-		return "Hello World!";
-	}
-	
 	@RequestMapping("/posts")
 	public String getPosts(){
 		return postService.getAllPosts().toString();
